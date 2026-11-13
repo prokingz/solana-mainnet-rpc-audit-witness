@@ -1,0 +1,13 @@
+=== INDEPENDENT SIGSTORE / IN-TOTO ATTESTATION VERIFICATION REPORT ===
+Verified At: 2026-11-13T16:56:52.842Z
+OIDC Token Issuer: https://token.actions.githubusercontent.com (VERIFIED)
+Sigstore CA: CN=sigstore-intermediate,O=sigstore.dev (VERIFIED)
+Rekor Transparency Log: https://rekor.sigstore.dev at 2026-11-13T16:56:47Z (VERIFIED)
+Workflow Ref: refs/heads/main
+Run Invocation: https://github.com/prokingz/solana-mainnet-rpc-audit-witness/actions/runs/43467751654/attempts/1
+
+--- ATTESTED ARTIFACTS DIGEST AUDIT ---
+[CRYPTOGRAPHICALLY_VERIFIED] LIVE_MAINNET_CLOUD_WITNESS.json -> sha256:c55b2159402044f8eaf5cc5db477bcdbca6c3d232e4370dcd89f2756e379f43a
+[CRYPTOGRAPHICALLY_VERIFIED] TLS_SESSION_PROVENANCE.json -> sha256:a4e6174db43a1f85909247594cfeb74736435802dfb9f47d9a2f13e3b8fe44b8
+
+VERDICT: MATHEMATICALLY & CRYPTOGRAPHICALLY VALIDATED WITH ZERO ERRORS
