@@ -5,6 +5,8 @@ on:
 
 permissions:
   contents: write
+  id-token: write
+  attestations: write
 
 jobs:
   mainnet_rpc_witness:
@@ -20,7 +22,7 @@ jobs:
         with:
           node-version: 20
 
-      - name: Execute Live JSON-RPC Query on Official Solana Mainnet
+      - name: Execute Live JSON-RPC Query on Official Solana Mainnet with Strict TLS & Assertion Checks
         run: |
           echo "=== GITHUB ACTIONS NEUTRAL CLOUD WITNESS ===" > CLOUD_WITNESS_META.txt
           echo "Runner OS: $(uname -a)" >> CLOUD_WITNESS_META.txt
@@ -31,10 +33,15 @@ jobs:
           sha256sum LIVE_MAINNET_CLOUD_WITNESS.json >> CLOUD_WITNESS_META.txt
           cat CLOUD_WITNESS_META.txt
 
-      - name: Commit Cloud-Captured JSON by github-actions[bot]
+      - name: Cryptographic Artifact Attestation by GitHub / Sigstore (SLSA Provenance)
+        uses: actions/attest-build-provenance@v2
+        with:
+          subject-path: LIVE_MAINNET_CLOUD_WITNESS.json
+
+      - name: Commit Cloud-Captured Artifacts by github-actions[bot]
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add LIVE_MAINNET_CLOUD_WITNESS.json CLOUD_WITNESS_META.txt
-          git commit -m "chore(witness): automated Solana Mainnet RPC capture [skip ci]" || true
+          git commit -m "chore(witness): verified Solana Mainnet RPC capture with Sigstore attestation [skip ci]" || true
           git push origin main
