@@ -37,12 +37,17 @@ jobs:
       - name: Cryptographic Artifact Attestation by GitHub / Sigstore (SLSA Provenance)
         uses: actions/attest-build-provenance@v2
         with:
-          subject-path: LIVE_MAINNET_CLOUD_WITNESS.json
+          subject-path: |
+            LIVE_MAINNET_CLOUD_WITNESS.json
+            TLS_SESSION_PROVENANCE.json
 
-      - name: Export Sigstore Attestation Bundle to File
+      - name: Export and Independently Verify Sigstore Attestation Bundle
         run: |
           gh attestation verify LIVE_MAINNET_CLOUD_WITNESS.json --repo ${{ github.repository }} --format json > ATTESTATION_SIGSTORE_BUNDLE.json
+          node verify_attestation.js
           sha256sum ATTESTATION_SIGSTORE_BUNDLE.json >> CLOUD_WITNESS_META.txt
+          sha256sum SIGSTORE_VERIFICATION_REPORT.txt >> CLOUD_WITNESS_META.txt
+          cat SIGSTORE_VERIFICATION_REPORT.txt
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
@@ -50,6 +55,6 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add LIVE_MAINNET_CLOUD_WITNESS.json TLS_SESSION_PROVENANCE.json ATTESTATION_SIGSTORE_BUNDLE.json CLOUD_WITNESS_META.txt
-          git commit -m "chore(witness): verified Solana Mainnet RPC capture with Sigstore attestation and TLS provenance [skip ci]" || true
+          git add LIVE_MAINNET_CLOUD_WITNESS.json TLS_SESSION_PROVENANCE.json ATTESTATION_SIGSTORE_BUNDLE.json SIGSTORE_VERIFICATION_REPORT.txt CLOUD_WITNESS_META.txt
+          git commit -m "chore(witness): verified Solana Mainnet RPC capture with dual Sigstore attestation and TLS provenance [skip ci]" || true
           git push origin main
