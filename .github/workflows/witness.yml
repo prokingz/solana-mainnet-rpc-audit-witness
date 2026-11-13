@@ -1,0 +1,40 @@
+name: Solana Mainnet Independent Cloud Witness
+on:
+  push:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  mainnet_rpc_witness:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Execute Live JSON-RPC Query on Official Solana Mainnet
+        run: |
+          echo "=== GITHUB ACTIONS NEUTRAL CLOUD WITNESS ===" > CLOUD_WITNESS_META.txt
+          echo "Runner OS: $(uname -a)" >> CLOUD_WITNESS_META.txt
+          echo "GitHub Run ID: ${{ github.run_id }}" >> CLOUD_WITNESS_META.txt
+          echo "Timestamp UTC: $(date -u +"%Y-%m-%dT%H:%M:%SZ")" >> CLOUD_WITNESS_META.txt
+
+          node query_mainnet.js
+          sha256sum LIVE_MAINNET_CLOUD_WITNESS.json >> CLOUD_WITNESS_META.txt
+          cat CLOUD_WITNESS_META.txt
+
+      - name: Commit Cloud-Captured JSON by github-actions[bot]
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add LIVE_MAINNET_CLOUD_WITNESS.json CLOUD_WITNESS_META.txt
+          git commit -m "chore(witness): automated Solana Mainnet RPC capture [skip ci]" || true
+          git push origin main
