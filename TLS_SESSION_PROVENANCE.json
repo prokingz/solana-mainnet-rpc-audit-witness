@@ -1,20 +1,24 @@
 {
-  "capturedAt": "2026-11-13T14:30:46.200Z",
+  "capturedAt": "2026-11-13T15:16:43.395Z",
   "endpoint": "api.mainnet-beta.solana.com:443",
   "genesisHash": "5eykt4UsFv8P8NJdTREpY1vzqKqZKvdpKuc147dw2N9d",
-  "persistentSocket": {
-    "localPort": 44958,
+  "socketIdentityProof": {
+    "sessionUuid": "8519adeb-0ac0-44e8-91e4-d2e3167f6740",
+    "localPort": 50776,
     "remotePort": 443,
     "protocol": "TLSv1.3",
     "cipherSuite": "TLS_AES_256_GCM_SHA384",
     "serverCertSubject": {
       "CN": "api.mainnet-beta.solana.com"
     },
-    "serverCertFingerprint256": "A2:62:66:AB:90:90:86:EB:4E:19:D4:17:2C:04:28:3D:71:98:D8:E3:DF:7B:58:4B:90:C8:25:3A:6E:7B:67:DE",
-    "caChainDepth": 3
+    "serverCertFingerprint256": "6F:52:E1:72:37:B7:84:7F:36:D7:51:EC:BA:D6:DE:11:19:D0:D5:35:CF:9D:0F:20:79:96:20:F2:A2:48:35:6A",
+    "caChainDepth": 3,
+    "strictObjectIdentityEnforced": true
   },
   "tlsSessionDetail": {
-    "socketLocalPort": 44958,
+    "socketInstanceIdentical": true,
+    "socketSessionUuid": "8519adeb-0ac0-44e8-91e4-d2e3167f6740",
+    "socketLocalPort": 50776,
     "socketRemotePort": 443,
     "protocol": "TLSv1.3",
     "cipher": {
@@ -31,10 +35,10 @@
         "O": "ZeroSSL GmbH",
         "CN": "ZeroSSL ECC DV SSL CA 2"
       },
-      "fingerprint256": "A2:62:66:AB:90:90:86:EB:4E:19:D4:17:2C:04:28:3D:71:98:D8:E3:DF:7B:58:4B:90:C8:25:3A:6E:7B:67:DE",
-      "valid_from": "Sep 29 00:00:00 2026 GMT",
-      "valid_to": "Dec 28 23:59:59 2026 GMT",
-      "serialNumber": "F590795D8132924AAA0879D0E4939681"
+      "fingerprint256": "6F:52:E1:72:37:B7:84:7F:36:D7:51:EC:BA:D6:DE:11:19:D0:D5:35:CF:9D:0F:20:79:96:20:F2:A2:48:35:6A",
+      "valid_from": "Sep 30 00:00:00 2026 GMT",
+      "valid_to": "Dec 29 23:59:59 2026 GMT",
+      "serialNumber": "423C49E6E6115B18C5FD80C23A85944D"
     },
     "certificateChain": [
       {
@@ -97,10 +101,11 @@
     {
       "id": 1,
       "query": "getGenesisHash",
-      "socketLocalPort": 44958,
-      "socketReused": true,
+      "socketLocalPort": 50776,
+      "socketObjectIdentityVerified": true,
+      "sessionUuidMatch": true,
       "tlsProtocol": "TLSv1.3",
-      "certFingerprint256": "A2:62:66:AB:90:90:86:EB:4E:19:D4:17:2C:04:28:3D:71:98:D8:E3:DF:7B:58:4B:90:C8:25:3A:6E:7B:67:DE",
+      "certFingerprint256": "6F:52:E1:72:37:B7:84:7F:36:D7:51:EC:BA:D6:DE:11:19:D0:D5:35:CF:9D:0F:20:79:96:20:F2:A2:48:35:6A",
       "status": "VERIFIED"
     },
     {
@@ -108,12 +113,13 @@
       "targetName": "Raydium AMM V4 Pool",
       "pubkey": "58oQChx4yWmvKdwLLZzBi4ChoCc2fqCUWBkwMihLYQo2",
       "owner": "675kPX9MHTjS2zt1qfr1NYHuzeLXfQM9H24wFSUt1Mp8",
-      "slot": 468960527,
+      "slot": 468973273,
       "dataLength": 752,
-      "socketLocalPort": 44958,
-      "socketReused": true,
+      "socketLocalPort": 50776,
+      "socketObjectIdentityVerified": true,
+      "sessionUuidMatch": true,
       "tlsProtocol": "TLSv1.3",
-      "certFingerprint256": "A2:62:66:AB:90:90:86:EB:4E:19:D4:17:2C:04:28:3D:71:98:D8:E3:DF:7B:58:4B:90:C8:25:3A:6E:7B:67:DE",
+      "certFingerprint256": "6F:52:E1:72:37:B7:84:7F:36:D7:51:EC:BA:D6:DE:11:19:D0:D5:35:CF:9D:0F:20:79:96:20:F2:A2:48:35:6A",
       "status": "VERIFIED_MATCH"
     },
     {
@@ -121,12 +127,13 @@
       "targetName": "V4 coinVault (WSOL)",
       "pubkey": "DQyrAcCrDXQ7NeoqGgDCZwBvWDcYmFCjSb9JtteuvPpz",
       "owner": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA",
-      "slot": 468960529,
+      "slot": 468973275,
       "dataLength": 165,
-      "socketLocalPort": 44958,
-      "socketReused": true,
+      "socketLocalPort": 50776,
+      "socketObjectIdentityVerified": true,
+      "sessionUuidMatch": true,
       "tlsProtocol": "TLSv1.3",
-      "certFingerprint256": "A2:62:66:AB:90:90:86:EB:4E:19:D4:17:2C:04:28:3D:71:98:D8:E3:DF:7B:58:4B:90:C8:25:3A:6E:7B:67:DE",
+      "certFingerprint256": "6F:52:E1:72:37:B7:84:7F:36:D7:51:EC:BA:D6:DE:11:19:D0:D5:35:CF:9D:0F:20:79:96:20:F2:A2:48:35:6A",
       "status": "VERIFIED_MATCH"
     },
     {
@@ -134,12 +141,13 @@
       "targetName": "V4 pcVault (USDC)",
       "pubkey": "HLmqeL62xR1QoZ1HKKbXRrdN1p3phKpxRMb2VVopvBBz",
       "owner": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA",
-      "slot": 468960531,
+      "slot": 468973277,
       "dataLength": 165,
-      "socketLocalPort": 44958,
-      "socketReused": true,
+      "socketLocalPort": 50776,
+      "socketObjectIdentityVerified": true,
+      "sessionUuidMatch": true,
       "tlsProtocol": "TLSv1.3",
-      "certFingerprint256": "A2:62:66:AB:90:90:86:EB:4E:19:D4:17:2C:04:28:3D:71:98:D8:E3:DF:7B:58:4B:90:C8:25:3A:6E:7B:67:DE",
+      "certFingerprint256": "6F:52:E1:72:37:B7:84:7F:36:D7:51:EC:BA:D6:DE:11:19:D0:D5:35:CF:9D:0F:20:79:96:20:F2:A2:48:35:6A",
       "status": "VERIFIED_MATCH"
     },
     {
@@ -147,12 +155,13 @@
       "targetName": "Raydium CPMM Pool",
       "pubkey": "11C17zj2S6Usbnqcqbv1e1Bvyh2TT3FM18n5fCL5ZEe",
       "owner": "CPMMoo8L3F4NbTegBCKVNunggL7H1ZpdTHKxQB5qKP1C",
-      "slot": 468960533,
+      "slot": 468973279,
       "dataLength": 637,
-      "socketLocalPort": 44958,
-      "socketReused": true,
+      "socketLocalPort": 50776,
+      "socketObjectIdentityVerified": true,
+      "sessionUuidMatch": true,
       "tlsProtocol": "TLSv1.3",
-      "certFingerprint256": "A2:62:66:AB:90:90:86:EB:4E:19:D4:17:2C:04:28:3D:71:98:D8:E3:DF:7B:58:4B:90:C8:25:3A:6E:7B:67:DE",
+      "certFingerprint256": "6F:52:E1:72:37:B7:84:7F:36:D7:51:EC:BA:D6:DE:11:19:D0:D5:35:CF:9D:0F:20:79:96:20:F2:A2:48:35:6A",
       "status": "VERIFIED_MATCH"
     },
     {
@@ -160,12 +169,13 @@
       "targetName": "CPMM token0Vault (WSOL)",
       "pubkey": "2KTJHKNHsqrnCdxkkpvDy4oBhkfGXGE4ryVyNvWuAkJD",
       "owner": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA",
-      "slot": 468960535,
+      "slot": 468973280,
       "dataLength": 165,
-      "socketLocalPort": 44958,
-      "socketReused": true,
+      "socketLocalPort": 50776,
+      "socketObjectIdentityVerified": true,
+      "sessionUuidMatch": true,
       "tlsProtocol": "TLSv1.3",
-      "certFingerprint256": "A2:62:66:AB:90:90:86:EB:4E:19:D4:17:2C:04:28:3D:71:98:D8:E3:DF:7B:58:4B:90:C8:25:3A:6E:7B:67:DE",
+      "certFingerprint256": "6F:52:E1:72:37:B7:84:7F:36:D7:51:EC:BA:D6:DE:11:19:D0:D5:35:CF:9D:0F:20:79:96:20:F2:A2:48:35:6A",
       "status": "VERIFIED_MATCH"
     },
     {
@@ -173,12 +183,13 @@
       "targetName": "CPMM token1Vault (7cLh...)",
       "pubkey": "4m8BxVRp1SBFtbrPbqbzJTqWhfb2Xi4SUgSjdjRKGZWw",
       "owner": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA",
-      "slot": 468960538,
+      "slot": 468973283,
       "dataLength": 165,
-      "socketLocalPort": 44958,
-      "socketReused": true,
+      "socketLocalPort": 50776,
+      "socketObjectIdentityVerified": true,
+      "sessionUuidMatch": true,
       "tlsProtocol": "TLSv1.3",
-      "certFingerprint256": "A2:62:66:AB:90:90:86:EB:4E:19:D4:17:2C:04:28:3D:71:98:D8:E3:DF:7B:58:4B:90:C8:25:3A:6E:7B:67:DE",
+      "certFingerprint256": "6F:52:E1:72:37:B7:84:7F:36:D7:51:EC:BA:D6:DE:11:19:D0:D5:35:CF:9D:0F:20:79:96:20:F2:A2:48:35:6A",
       "status": "VERIFIED_MATCH"
     }
   ]
